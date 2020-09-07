@@ -1,0 +1,14 @@
+Run as debug:
+rasa run -vv -m <path_to_model> --endpoints endpoints.yml --credentials credentials.yml --enable-api 
+After that, do a POST request with the body:
+
+{
+	"text": "How much for the one bedroom ?"
+}
+to
+
+http://localhost:5005/model/parse
+
+
+Build model:
+rasa train

@@ -1,0 +1,141 @@
+actions:
+- action_default_ask_rephrase
+- action_default_fallback
+- action_introduce_and_respond_to_name
+- action_process_favourite_subject
+- action_process_score
+- action_process_best_friends
+- action_process_bye
+- action_record_reason
+- action_final_fallback
+- utter_academics_intro
+- utter_ask_name
+- utter_ask_percentage
+- utter_ask_teacher_help
+- utter_bye
+- utter_favourite_subject
+- utter_greet
+- utter_no_issues
+- utter_pacifier
+- utter_start
+- utter_teacher_help
+
+entities:
+- cgpa
+- percentage
+- subject1
+- subject2
+- subject3
+- subject4
+- subject5
+- subject6
+- subjectall
+- user_name
+
+intents:
+- tell_help_reason_positive
+- dont_start
+- greet
+- tell_name
+- tell_score
+- bid_farewell
+- tell_favourite_subject
+- ok_start
+- tell_reason_for_no_fav
+- tell_help_reason_negetive
+- tell_best_friends_positive
+- tell_best_friends_negetive
+- tell_no_friends_reason
+- tell_decision_support
+- tell_parents_allow
+- tell_more_preference
+- stop_bot_eva
+- out_of_scope
+- action_introduce_and_respond_to_name
+- action_process_score
+- action_process_favourite_subject
+- tell_ask_teacher_help
+- action_process_best_friends
+- action_process_bye
+- action_record_reason
+- action_default_fallback
+- action_final_fallback
+responses:
+  utter_academics_intro:
+  - text: Ok, Lets start with your academics.
+  utter_ask_name:
+  - text: May I know your good name ?
+  - text: What is your sweet name?
+  utter_ask_percentage:
+  - text: What is your percentage or scoring in the recent test or exam that you have
+      taken ?
+  utter_ask_best_friends:
+  - text: So, Who are your best friends in school ?
+  utter_ask_teacher_help:
+  - text: Have you asked for any help?
+  utter_bye:
+  - text: Bye
+  utter_favourite_subject:
+  - text: Which are your favourite subject in school ?
+  utter_greet:
+  - text: Hello there!
+  - text: Hey!
+  - text: Hello Dear!
+  utter_no_issues:
+  - text: No issues i will still continue, even if it is a no from you
+  - text: I know you have enough time lets continue
+  utter_pacifier:
+  - text: Hmm..
+  - text: Hmm Ok.
+  utter_start:
+  - text: So shall We start?
+  - text: Can we start?
+  utter_teacher_help:
+  - text: Do your teachers give extra help when needed?
+  utter_cool:
+  - text: That is cool.
+  - text: Cool
+  utter_why_no_friends:
+  - text: You are joking i suppose, why dont you have best friends in school
+  - text: I thought you would have a lot of best friends. But why dont you have one?
+  utter_try_having_friends:
+  - text: Dont worry I will always be there as your friend!
+  - text: Try to make friends. I am sure they would love to have you as a friend
+  utter_parents_allow:
+  - text: Do Your parents allow you to play or be with your friends ?
+  - text: Will your parents permit you to stay with or play with your friends?
+  utter_decision:
+  - text: Do your parents encourge you to make your own decisions ?
+  - text: Do your parents support the decisions that you take?
+  utter_sorry_to_hear_that:
+  - text: Sorry for asking!
+  utter_more_preference:
+  - text: Do you feel that your parents give more preference to your sibling over you?
+  - text: Have you ever felt that your parents prioritize your sibling more than you?
+  utter_positive_decision:
+  - text: Thats nice. You seem to have supportive parents.
+  - text: Hope you make right decisions.
+  utter_negetive_decision:
+  - text: Thats Fine try to read some books on this.
+  - text: I think you should watch the movie Rise Of Hitler
+  utter_knew_help:
+  - text: I knew teachers would always help. But, they would have other work to do sometimes.
+  utter_ask_doubt:
+  - text: You must ask something if you do not know it. Teachers would help for sure.
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  user_name:
+    type: text
+  family_score:
+    type: float
+    initial_value: 0
+  teachers_score:
+    type: float
+    initial_value: 0
+  friends_score:
+    type: float
+    initial_value: 0
+  
+  
